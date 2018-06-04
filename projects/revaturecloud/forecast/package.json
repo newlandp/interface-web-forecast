@@ -1,0 +1,8 @@
+{
+  "name": "@revaturecloud/forecast",
+  "version": "0.1.0",
+  "peerDependencies": {
+    "@angular/common": "6.0.3",
+    "@angular/core": "6.0.3"
+  }
+}

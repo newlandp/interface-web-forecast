@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "@revaturecloud/forecast": {
+      "root": "projects/revaturecloud/forecast",
+      "sourceRoot": "projects/revaturecloud/forecast/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/revaturecloud/forecast/tsconfig.lib.json",
+            "project": "projects/revaturecloud/forecast/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/revaturecloud/forecast/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/revaturecloud/forecast/src/test.ts",
+            "tsConfig": "projects/revaturecloud/forecast/tsconfig.spec.json",
+            "karmaConfig": "projects/revaturecloud/forecast/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/revaturecloud/forecast/tsconfig.lib.json",
+              "projects/revaturecloud/forecast/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "interface-web-forecast"
