@@ -1,10 +1,13 @@
-# dockerignore::author
-# __author__ is licensed under the terms of the [MIT License](https://github.com/fredbelotte/author/blob/master/LICENSE).
+# interface-web-forecast://dockerignore
+# licensed under the terms of the [MIT License](https://github.com/revaturecloud/interface-web-forecast/blob/master/LICENSE).
 
 # DIRECTORY - ROOT
 # exclude - filepath
 .vagrant
 .vscode
+dist
+node_modules
+tmp
 
 # exclude - filename
 .dockerignore
@@ -16,3 +19,8 @@ LICENSE*
 README*
 ubuntu*
 vagrant*
+
+e2e/*.js
+e2e/*.map
+src/app/**/*.js
+src/app/**/*.js.map
