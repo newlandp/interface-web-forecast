@@ -1,10 +1,66 @@
-# gitignore::author
-# licensed under the terms of the [MIT License](https://github.com/fredbelotte/author/blob/master/LICENSE).
+# interface-web-forecast://gitignore
+# licensed under the terms of the [MIT License](https://github.com/revaturecloud/interface-web-forecast/blob/master/LICENSE).
 
-# PROJECT
+# PROJECT - BEGIN
+
 # exclude - filepath
 .vagrant/
 .vscode/
 
 # exclude - filename
 ubuntu*
+
+e2e/*.js
+e2e/*.map
+src/app/**/*.js
+src/app/**/*.js.map
+
+# PROJECT - END
+
+# Created by https://www.gitignore.io/api/angular
+
+# compiled output
+dist/
+tmp/
+
+# dependencies
+node_modules/
+bower_components/
+
+# IDEs and editors
+/.idea
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+#System Files
+.DS_Store
+
+# End of https://www.gitignore.io/api/angular
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/out-tsc
+
+# IDEs and editors
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# misc
+yarn-error.log
+
+# System Files
+Thumbs.db
+
+# End http://help.github.com/ignore-files/ for more about ignoring files.

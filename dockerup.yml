@@ -1,61 +1,29 @@
 version: "3.6"
 
-labels:
-  app.owner: "fred belotte"
-  app.version: "0.1.0"
-
 networks:
   appnet:
 
 services:
-  api:
-    image: vendor/repository
+  web:
+    image: revaturecloud/interface-web-forecast:latest
     deploy:
       replicas: 1
       resources:
         limits:
           cpus: "0.5"
-          memory: "512M"
+          memory: "256M"
         reservations:
           cpus: "0.25"
-          memory: "256M"
+          memory: "128M"
       restart_policy:
         condition: on-failure
         delay: 10s
         max_attempts: 3
         window: 60s
-  ctx:
-    image: vendor/repository
-    deploy:
-      replicas: 1
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "512M"
-        reservations:
-          cpus: "0.25"
-          memory: "256M"
-      restart_policy:
-        condition: on-failure
-        delay: 10s
-        max_attempts: 3
-        window: 60s
-  lib:
-    image: vendor/repository
-    deploy:
-      replicas: 1
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "512M"
-        reservations:
-          cpus: "0.25"
-          memory: "256M"
-      restart_policy:
-        condition: on-failure
-        delay: 10s
-        max_attempts: 3
-        window: 60s
+    networks:
+      - appnet
+    ports:
+      - "9000:80"
 
 volumes:
   appdata:
