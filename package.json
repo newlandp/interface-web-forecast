@@ -1,6 +1,11 @@
 {
+  "license": "MIT",
   "name": "interface-web-forecast",
   "version": "0.1.0",
+  "author": {
+    "name": "fred belotte",
+    "url": "https://www.npmjs.com/~fredbelotte"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --port 9000",

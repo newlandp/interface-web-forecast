@@ -1,6 +1,11 @@
 {
+  "license": "MIT",
   "name": "@revaturecloud/forecast",
   "version": "0.1.0",
+  "author": {
+    "name": "fred belotte",
+    "url": "https://www.npmjs.com/~fredbelotte"
+  },
   "peerDependencies": {
     "@angular/common": "6.0.3",
     "@angular/core": "6.0.3"
