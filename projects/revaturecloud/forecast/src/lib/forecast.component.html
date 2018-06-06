@@ -1,1 +1,7 @@
 <div>Hi</div>
+<div [ngSwitch]="tab">
+    <app-user-forecast *ngSwitchCase="user-forecast"></app-user-forecast>
+    <app-dummy *ngSwitchCase="dummy"></app-dummy>
+
+
+</div>
