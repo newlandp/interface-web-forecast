@@ -67,10 +67,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
+            "main": "projects/revaturecloud/forecast/src/test.ts",
+            "tsConfig": "projects/revaturecloud/forecast/tsconfig.spec.json",
+            "karmaConfig": "projects/revaturecloud/forecast/karma.conf.js",
             "styles": [
               "src/styles.css"
             ],
