@@ -10,6 +10,7 @@
   },
   "files": [
     "test.ts",
+    "../projects/revaturecloud/forecast/src/test.ts",
     "polyfills.ts"
   ],
   "include": [
