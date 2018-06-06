@@ -2,12 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-forecast',
-  template: `
-    <p>
-      forecast works!
-    </p>
-  `,
-  styles: []
+  templateUrl: './forecast.component.html',
+  styleUrls: ['./forecast.component.css']
 })
 export class ForecastComponent implements OnInit {
 
