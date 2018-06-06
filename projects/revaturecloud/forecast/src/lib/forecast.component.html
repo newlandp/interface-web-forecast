@@ -1,7 +1,9 @@
 <div>Hi</div>
+<button [class.active]="isSelected('user')" (click)="setTab('user')">User</button>
+<button [class.active]="isSelected('dummy')" (click)="setTab('dummy')">Dummy</button>
+
+
 <div [ngSwitch]="tab">
-    <app-user-forecast *ngSwitchCase="user-forecast"></app-user-forecast>
-    <app-dummy *ngSwitchCase="dummy"></app-dummy>
-
-
+    <lib-user-forecast *ngSwitchCase="'user'"></lib-user-forecast>
+    <lib-dummy *ngSwitchCase="'dummy'"></lib-dummy>
 </div>
