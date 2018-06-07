@@ -11,19 +11,9 @@ import { DummyComponent } from './dummy/dummy.component';
 })
 
 export class ForecastComponent implements OnInit {
-
-  tab: string;
-
   constructor() { }
 
   ngOnInit() {
-  }
 
-  setTab(value: string) {
-    this.tab = value;
-  }
-
-  isSelected(value: string) {
-    return this.tab === value;
   }
 }
