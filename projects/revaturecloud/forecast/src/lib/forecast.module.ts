@@ -31,7 +31,8 @@ import { ChartsComponent } from './charts/charts.component';
     ForecastComponent,
     UserForecastComponent,
     DummyComponent,
-    ChartsComponent],
+    ChartsComponent
+  ],
   exports: [ForecastComponent]
 })
 export class ForecastModule { }
