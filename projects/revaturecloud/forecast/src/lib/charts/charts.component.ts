@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {single, multi} from './data';
 
 @Component({
   selector: 'lib-charts',
@@ -7,63 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartsComponent implements OnInit {
 
-  single = [
-    {
-      "name": "Germany",
-      "value": 8940000
-    },
-    {
-      "name": "USA",
-      "value": 5000000
-    },
-    {
-      "name": "France",
-      "value": 7200000
-    }
-  ];
-  multi = [
-    {
-      "name": "Germany",
-      "series": [
-        {
-          "name": "2010",
-          "value": 7300000
-        },
-        {
-          "name": "2011",
-          "value": 8940000
-        }
-      ]
-    },
-
-    {
-      "name": "USA",
-      "series": [
-        {
-          "name": "2010",
-          "value": 7870000
-        },
-        {
-          "name": "2011",
-          "value": 8270000
-        }
-      ]
-    },
-
-    {
-      "name": "France",
-      "series": [
-        {
-          "name": "2010",
-          "value": 5000002
-        },
-        {
-          "name": "2011",
-          "value": 5800000
-        }
-      ]
-    }
-  ];
+  single: any[];
+  multi: any[];
 
   view: any[] = [700, 400];
 
@@ -85,6 +31,7 @@ export class ChartsComponent implements OnInit {
   autoScale = true;
 
   constructor() {
+    Object.assign(this, {single, multi})
   }
 
   onSelect(event) {
