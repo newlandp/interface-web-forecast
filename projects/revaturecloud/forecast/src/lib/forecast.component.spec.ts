@@ -59,18 +59,4 @@ describe('ForecastComponent', () => {
     expect(userForecast).toBeTruthy();
     expect(dummy).toBeFalsy();
   });
-
-  it('should display dummy component and not render user forecast component after clicking dummy tab', () => {
-    let de = fixture.debugElement.query(By.css('mat-tab[label="User"]'));
-
-    de.triggerEventHandler('click', null);
-
-    fixture.detectChanges();
-
-    let dummy = fixture.debugElement.query(By.css('lib-dummy'));
-    let userForecast = fixture.debugElement.query(By.css('lib-user-forecast'));
-
-    expect(dummy).toBeTruthy();
-    expect(userForecast).toBeFalsy();
-  });
 });
