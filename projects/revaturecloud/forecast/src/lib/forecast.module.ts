@@ -16,6 +16,7 @@ import { UserForecastComponent } from './user-forecast/user-forecast.component';
 import { DummyComponent } from './dummy/dummy.component';
 import { ChartsComponent } from './charts/charts.component';
 
+
 @NgModule({
   imports: [
     NgbModule.forRoot(),
