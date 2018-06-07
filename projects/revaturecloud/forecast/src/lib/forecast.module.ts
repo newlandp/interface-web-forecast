@@ -7,7 +7,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 
-import {BrowserModule} from '@angular/platform-browser';
+import { BrowserModule} from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {NgxChartsModule} from '@swimlane/ngx-charts';
@@ -19,9 +19,11 @@ import { ChartsComponent } from './charts/charts.component';
 @NgModule({
   imports: [
     NgbModule.forRoot(),
+
     MatTabsModule,
     MatCardModule,
     MatIconModule,
+
     BrowserAnimationsModule,
     NgxChartsModule
   ],
