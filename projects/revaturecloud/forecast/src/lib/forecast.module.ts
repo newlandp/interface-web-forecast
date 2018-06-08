@@ -1,3 +1,4 @@
+import { ForecastService } from './forecast.service';
 import { NgModule } from '@angular/core';
 import { ForecastComponent } from './forecast.component';
 
@@ -16,6 +17,8 @@ import { UserForecastComponent } from './user-forecast/user-forecast.component';
 import { DummyComponent } from './dummy/dummy.component';
 import { ChartsComponent } from './charts/charts.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   imports: [
@@ -26,7 +29,9 @@ import { ChartsComponent } from './charts/charts.component';
     MatIconModule,
 
     BrowserAnimationsModule,
-    NgxChartsModule
+    NgxChartsModule,
+
+    HttpClientModule
   ],
   declarations: [
     ForecastComponent,
@@ -34,6 +39,11 @@ import { ChartsComponent } from './charts/charts.component';
     DummyComponent,
     ChartsComponent
   ],
-  exports: [ForecastComponent]
+  providers: [
+    ForecastService
+  ],
+  exports: [
+    ForecastComponent
+  ]
 })
 export class ForecastModule { }

@@ -1,3 +1,4 @@
+import { ForecastService } from './forecast.service';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -12,9 +13,18 @@ import { DummyComponent } from './dummy/dummy.component';
 })
 
 export class ForecastComponent implements OnInit {
-  constructor() { }
+  locations;
+  snapshots;
+
+  constructor(private forecastService: ForecastService) { }
 
   ngOnInit() {
+    this.forecastService.getAllLocationsTemp().subscribe(
+      locations => this.locations = locations
+    );
 
+    this.forecastService.getSnapshotsTemp().subscribe(
+      snapshots => this.snapshots = snapshots
+    );
   }
 }
