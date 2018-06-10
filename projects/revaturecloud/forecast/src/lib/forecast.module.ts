@@ -11,12 +11,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {ChartsModule} from 'ng2-charts';
+
+
 @NgModule({
   imports: [
     MatTabsModule,
     BrowserAnimationsModule,
-
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   declarations: [
     ForecastComponent,
