@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { ForecastService } from '../../public_api';
 
 @Component({
@@ -6,12 +6,12 @@ import { ForecastService } from '../../public_api';
   templateUrl: './user-forecast.component.html',
   styleUrls: ['./user-forecast.component.css']
 })
-export class UserForecastComponent implements OnInit {
+export class UserForecastComponent implements OnChanges {
   @Input('snapshots') snapshots: any[];
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnChanges() {
     console.log(this.snapshots);
   }
 
