@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ForecastService } from '../../public_api';
 
 @Component({
   selector: 'lib-user-forecast',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-forecast.component.css']
 })
 export class UserForecastComponent implements OnInit {
+  @Input('snapshots') snapshots: any[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    console.log(this.snapshots);
   }
 
 }
