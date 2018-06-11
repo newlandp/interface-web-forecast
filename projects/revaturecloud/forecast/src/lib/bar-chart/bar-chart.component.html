@@ -1,0 +1,19 @@
+<div class="card mb-3">
+  <div class="card-header">
+    Bar Chart
+  </div>
+  <div class="card-body">
+    <canvas baseChart
+            [datasets]="this.barChartData"
+            [labels]="this.barChartLabels"
+            [options]="this.barChartOptions"
+            [legend]="this.barChartLegend"
+            [chartType]="this.barChartType"
+            (chartHover)="this.chartHovered($event)"
+            (chartClick)="this.chartClicked($event)">
+    </canvas>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-info btn-sm" (click)="randomize()">Update</button>
+  </div>
+</div>

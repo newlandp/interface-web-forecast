@@ -12,6 +12,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {ChartsModule} from 'ng2-charts';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {ChartsModule} from 'ng2-charts';
     ForecastComponent,
     UserForecastComponent,
     DummyComponent,
-    ChartsComponent
+    ChartsComponent,
+    BarChartComponent
   ],
   providers: [
     ForecastService
