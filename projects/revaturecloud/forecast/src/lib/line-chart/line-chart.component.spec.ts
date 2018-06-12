@@ -1,3 +1,4 @@
+import { By } from '@angular/platform-browser';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LineChartComponent } from './line-chart.component';
@@ -25,6 +26,8 @@ describe('LineChartComponent', () => {
   });
 
   it('should call the chartClicked method when clicked', () => {
-    component.chartClicked
+    let chart = fixture.nativeElement.querySelector('canvas');
+    chart.click();
+    expect(component.chartClicked).toHaveBeenCalled();
   });
 });
