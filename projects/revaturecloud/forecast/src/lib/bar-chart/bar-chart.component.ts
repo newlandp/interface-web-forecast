@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-bar-chart',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bar-chart.component.css']
 })
 export class BarChartComponent {
+
+  @Input('snapshots') snapshots: any[];
 
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
@@ -33,11 +35,11 @@ export class BarChartComponent {
   constructor() { }
 
   public chartClicked(e: any): void {
-    // console.log(e);
+    console.log(this.snapshots);
   }
 
   public chartHovered(e: any): void {
-    // console.log(e);
+    console.log(this.snapshots);
   }
 
   public randomize(): void {
