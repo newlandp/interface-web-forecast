@@ -17,6 +17,7 @@ import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.componen
 import { RadarChartComponent } from './radar-chart/radar-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.component';
+import { SnapshotsComponent } from './snapshots/snapshots.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.com
     DoughnutChartComponent,
     RadarChartComponent,
     PieChartComponent,
-    PolarAreaChartComponent
+    PolarAreaChartComponent,
+    SnapshotsComponent
   ],
   providers: [
     ForecastService
