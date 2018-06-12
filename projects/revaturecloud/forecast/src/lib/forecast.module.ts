@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ChartsModule} from 'ng2-charts';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
+import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { LineChartComponent } from './line-chart/line-chart.component';
     DummyComponent,
     ChartsComponent,
     BarChartComponent,
-    LineChartComponent
+    LineChartComponent,
+    DoughnutChartComponent
   ],
   providers: [
     ForecastService
