@@ -11,8 +11,6 @@ export class UserForecastComponent implements OnChanges {
 
   constructor() {}
 
-  ngOnChanges() {
-    console.log(this.snapshots);
-  }
+  ngOnChanges() {}
 
 }

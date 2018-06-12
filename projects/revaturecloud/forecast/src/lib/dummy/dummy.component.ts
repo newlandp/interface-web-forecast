@@ -11,8 +11,6 @@ export class DummyComponent implements OnChanges {
 
   constructor() { }
 
-  ngOnChanges() {
-    console.log(this.snapshots);
-  }
+  ngOnChanges() {}
 
 }

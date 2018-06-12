@@ -11,8 +11,6 @@ export class SnapshotsComponent implements OnChanges {
 
   constructor() { }
 
-  ngOnChanges() {
-    console.log(this.snapshots);
-  }
+  ngOnChanges() {}
 
 }
