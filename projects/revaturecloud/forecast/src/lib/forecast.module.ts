@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { ForecastComponent } from './forecast.component';
 import { UserForecastComponent } from './user-forecast/user-forecast.component';
 import { DummyComponent } from './dummy/dummy.component';
-import { ChartsComponent } from './charts/charts.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -31,7 +30,6 @@ import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.com
     ForecastComponent,
     UserForecastComponent,
     DummyComponent,
-    ChartsComponent,
     BarChartComponent,
     LineChartComponent,
     DoughnutChartComponent,
