@@ -1,0 +1,18 @@
+<div class="card mb-3">
+  <div class="card-header">
+    Line Chart
+  </div>
+  <div class="card-body">
+    <canvas baseChart
+            height="130"
+            [datasets]="this.lineChartData"
+            [labels]="this.lineChartLabels"
+            [options]="this.lineChartOptions"
+            [colors]="this.lineChartColors"
+            [legend]="this.lineChartLegend"
+            [chartType]="this.lineChartType"
+            (chartHover)="this.chartHovered($event)"
+            (chartClick)="this.chartClicked($event)">
+    </canvas>
+  </div>
+</div>
