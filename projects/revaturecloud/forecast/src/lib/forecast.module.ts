@@ -15,6 +15,7 @@ import {ChartsModule} from 'ng2-charts';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { RadarChartComponent } from './radar-chart/radar-chart.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.componen
     ChartsComponent,
     BarChartComponent,
     LineChartComponent,
-    DoughnutChartComponent
+    DoughnutChartComponent,
+    RadarChartComponent
   ],
   providers: [
     ForecastService
