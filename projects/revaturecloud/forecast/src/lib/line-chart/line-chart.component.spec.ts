@@ -7,6 +7,7 @@ describe('LineChartComponent', () => {
   let fixture: ComponentFixture<LineChartComponent>;
 
   beforeEach(async(() => {
+    // test bed is the angular module environment
     TestBed.configureTestingModule({
       declarations: [ LineChartComponent ]
     })
@@ -21,5 +22,9 @@ describe('LineChartComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call the chartClicked method when clicked', () => {
+    component.chartClicked
   });
 });
