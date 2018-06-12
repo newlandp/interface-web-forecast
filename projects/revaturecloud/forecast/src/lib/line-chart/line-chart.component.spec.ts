@@ -16,10 +16,18 @@ describe('LineChartComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LineChartComponent);
     component = fixture.componentInstance;
+    // console.log("--------------");
+    // console.log(fixture);
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call the chartClicked method when clicked', () => {
+    let chart = fixture.nativeElement.querySelector('canvas');
+    chart.click();
+    expect(component.chartClicked).toHaveBeenCalled();
   });
 });

@@ -1,3 +1,8 @@
+import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
 import { UserForecastComponent } from './user-forecast/user-forecast.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
@@ -10,6 +15,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DummyComponent } from './dummy/dummy.component';
 
 import { By } from '@angular/platform-browser';
+import { RadarChartComponent } from './radar-chart/radar-chart.component';
+import {ChartsModule} from 'ng2-charts';
+import { ForecastModule } from './forecast.module';
+
 
 describe('ForecastComponent', () => {
   let component: ForecastComponent;
@@ -18,15 +27,11 @@ describe('ForecastComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        ForecastComponent,
-        UserForecastComponent,
-        DummyComponent
+
       ],
       imports: [
-        MatTabsModule,
-        MatCardModule,
-        MatIconModule,
-        BrowserAnimationsModule
+        ForecastModule
+
       ]
     })
     .compileComponents();
