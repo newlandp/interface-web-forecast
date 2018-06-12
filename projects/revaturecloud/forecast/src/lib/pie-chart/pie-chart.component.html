@@ -1,0 +1,15 @@
+<div class="card mb-3">
+  <div class="card-header">
+    Pie Chart
+  </div>
+  <div class="card-body">
+    <canvas baseChart
+            height="150px"
+            [data]="this.pieChartData"
+            [labels]="this.pieChartLabels"
+            [chartType]="this.pieChartType"
+            (chartHover)="this.chartHovered($event)"
+            (chartClick)="this.chartClicked($event)">
+    </canvas>
+  </div>
+</div>
