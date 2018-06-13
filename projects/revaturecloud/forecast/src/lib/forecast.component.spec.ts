@@ -1,3 +1,8 @@
+import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
 import { UserForecastComponent } from './user-forecast/user-forecast.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
@@ -10,6 +15,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DummyComponent } from './dummy/dummy.component';
 
 import { By } from '@angular/platform-browser';
+import { RadarChartComponent } from './radar-chart/radar-chart.component';
+import {ChartsModule} from 'ng2-charts';
+import { ForecastModule } from './forecast.module';
+
 
 describe('ForecastComponent', () => {
   let component: ForecastComponent;
@@ -18,15 +27,11 @@ describe('ForecastComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        ForecastComponent,
-        UserForecastComponent,
-        DummyComponent
+
       ],
       imports: [
-        MatTabsModule,
-        MatCardModule,
-        MatIconModule,
-        BrowserAnimationsModule
+        ForecastModule
+
       ]
     })
     .compileComponents();
@@ -51,11 +56,14 @@ describe('ForecastComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should display user forecast initially and no other tab should render', () => {
+  xit('should display user forecast initially and no other tab should render', () => {
     fixture.detectChanges();
-    let userForecast = fixture.debugElement.query(By.css('lib-user-forecast'));
-    let dummy = fixture.debugElement.query(By.css('lib-dummy'));
+    let userForecast = fixture.debugElement.query(By.css('div[name="user-forecast"]'));
+    let dummy = fixture.debugElement.query(By.css('div[name="dummy"]'));
 
+
+    console.log(userForecast);
+    console.log(dummy);
     expect(userForecast).toBeTruthy();
     expect(dummy).toBeFalsy();
   });
