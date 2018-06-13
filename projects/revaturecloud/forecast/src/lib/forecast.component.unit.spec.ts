@@ -1,9 +1,9 @@
 import { ForecastService } from './forecast.service';
-import { ForecastComponent } from "../public_api";
+import { ForecastComponent } from "./forecast.component";
 
 describe('forecast component', () => {
-  let component: ForecastComponent;
   let service: ForecastService;
+  let component: ForecastComponent;
 
   beforeEach(() => {
     service = new ForecastService(null);
