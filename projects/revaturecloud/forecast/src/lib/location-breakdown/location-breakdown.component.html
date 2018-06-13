@@ -1,5 +1,28 @@
-<div class="row">
-  <div class="col">
-    <lib-pie-chart *ngIf="this.snapshots" [snapshots]="this.snapshots"></lib-pie-chart>
-  </div>
-</div>
+<mat-tab-group class="tab-group">
+  <mat-tab label="Total Rooms per Location">
+    <ng-template matTabContent>
+      <div class="tab-content">
+
+        <lib-pie-chart *ngIf="this.snapshots"
+                      [restonSnapshots]="this.restonSnapshots"
+                      [tampaSnapshots]="this.tampaSnapshots"
+                      [newYorkSnapshots]="this.newYorkSnapshots"
+                      [type]="'rooms'"></lib-pie-chart>
+
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Total Users per Location">
+    <ng-template matTabContent>
+      <div class="tab-content">
+
+        <lib-pie-chart *ngIf="this.snapshots"
+                      [restonSnapshots]="this.restonSnapshots"
+                      [tampaSnapshots]="this.tampaSnapshots"
+                      [newYorkSnapshots]="this.newYorkSnapshots"
+                      [type]="'users'"></lib-pie-chart>
+
+      </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

@@ -7,13 +7,18 @@ import { Component, OnChanges, Input } from '@angular/core';
 })
 export class LocationBreakdownComponent implements OnChanges {
 
-  // do breakdown by total rooms and users
+  restonSnapshots: any[];
+  tampaSnapshots: any[];
+  newYorkSnapshots: any[];
 
   @Input('snapshots') snapshots: any[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnChanges() {
+    this.restonSnapshots = this.snapshots.filter(s => s.location == 'Reston');
+    this.tampaSnapshots = this.snapshots.filter(s => s.location == 'Tampa');
+    this.newYorkSnapshots = this.snapshots.filter(s => s.location == 'New York');
   }
 
 }
