@@ -18,6 +18,7 @@ import { RadarChartComponent } from './radar-chart/radar-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.component';
 import { SnapshotsComponent } from './snapshots/snapshots.component';
+import { LocationsComponent } from './locations/locations.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { SnapshotsComponent } from './snapshots/snapshots.component';
     RadarChartComponent,
     PieChartComponent,
     PolarAreaChartComponent,
-    SnapshotsComponent
+    SnapshotsComponent,
+    LocationsComponent
   ],
   providers: [
     ForecastService
