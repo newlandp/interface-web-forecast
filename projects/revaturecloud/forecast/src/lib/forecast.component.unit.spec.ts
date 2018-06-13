@@ -1,5 +1,5 @@
 import { ForecastService } from './forecast.service';
-import { ForecastComponent } from "../public_api";
+import { ForecastComponent } from "./forecast.component";
 
 describe('forecast component', () => {
   let service: ForecastService;
