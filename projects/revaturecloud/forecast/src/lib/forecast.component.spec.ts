@@ -58,8 +58,8 @@ describe('ForecastComponent', () => {
 
   it('should display user forecast initially and no other tab should render', () => {
     fixture.detectChanges();
-    let userForecast = fixture.debugElement.query(By.css('lib-user-forecast'));
-    let dummy = fixture.debugElement.query(By.css('lib-dummy'));
+    let userForecast = fixture.debugElement.query(By.css('div[name="user-forecast"]'));
+    let dummy = fixture.debugElement.query(By.css('div[name="dummy"]'));
 
     expect(userForecast).toBeTruthy();
     expect(dummy).toBeFalsy();

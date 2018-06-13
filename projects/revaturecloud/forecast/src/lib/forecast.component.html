@@ -3,14 +3,14 @@
 <mat-tab-group class="tab-group">
   <mat-tab label="User">
     <ng-template matTabContent>
-      <div class="tab-content">
+      <div class="tab-content" name="user-forecast">
 
         <lib-user-forecast [snapshots]="this.snapshots"></lib-user-forecast>
 
       </div>
     </ng-template>
   </mat-tab>
-  <mat-tab label="Dummy">
+  <mat-tab label="Dummy" name="dummy">
     <ng-template matTabContent>
       <div class="tab-content">
 
