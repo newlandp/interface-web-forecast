@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SnapshotsComponent } from './snapshots.component';
+import { ChartsModule } from 'ng2-charts';
+
 
 describe('SnapshotsComponent', () => {
   let component: SnapshotsComponent;
@@ -8,7 +10,8 @@ describe('SnapshotsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SnapshotsComponent ]
+      declarations: [ SnapshotsComponent ],
+      imports: [ ChartsModule ]
     })
     .compileComponents();
   }));
