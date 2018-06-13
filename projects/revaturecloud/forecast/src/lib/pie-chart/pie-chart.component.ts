@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'lib-pie-chart',
@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PieChartComponent {
 
+  @Input('snapshots') snapshots: any[];
+
   public pieChartLabels: string[] = [
-    'Download Sales',
-    'In-Store Sales',
-    'Mail Sales'
+    'Reston',
+    'Tampa',
+    'New York'
   ];
 
   public pieChartData: number[] = [300, 500, 100];

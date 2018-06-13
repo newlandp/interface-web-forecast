@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserForecastComponent } from './user-forecast.component';
+import { LocationBreakdownComponent } from './location-breakdown.component';
 
-describe('UserForecastComponent', () => {
-  let component: UserForecastComponent;
-  let fixture: ComponentFixture<UserForecastComponent>;
+describe('LocationBreakdownComponent', () => {
+  let component: LocationBreakdownComponent;
+  let fixture: ComponentFixture<LocationBreakdownComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserForecastComponent ]
+      declarations: [ LocationBreakdownComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserForecastComponent);
+    fixture = TestBed.createComponent(LocationBreakdownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
