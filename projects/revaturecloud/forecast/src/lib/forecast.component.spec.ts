@@ -3,7 +3,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
-import { UserForecastComponent } from './user-forecast/user-forecast.component';
+// import { UserForecastComponent } from './user-forecast/user-forecast.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ForecastComponent } from './forecast.component';

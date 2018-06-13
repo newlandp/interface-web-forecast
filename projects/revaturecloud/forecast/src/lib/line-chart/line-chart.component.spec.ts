@@ -26,10 +26,24 @@ describe('LineChartComponent', () => {
   });
 
   it('should call the chartClicked method when clicked', () => {
-    console.log("--------");
-    console.log(fixture);
+
+    let spy = spyOn(component, 'chartClicked');
+    fixture.detectChanges();
     let chart = fixture.nativeElement.querySelector('canvas');
     chart.click();
-    expect(component.chartClicked).toHaveBeenCalled();
+
+    expect(spy).toHaveBeenCalled();
+
   });
+
+  it('should call the chartHovered method when hovered', () => {
+    let spy = spyOn(component, 'chartHovered');
+    fixture.detectChanges();
+    let chart = fixture.nativeElement.querySelector('canvas');
+    let event =  new Event('chartHover');
+    console.log(event);
+    chart.dispatchEvent(event);
+    expect(spy).toHaveBeenCalled();
+
+  })
 });
