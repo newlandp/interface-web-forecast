@@ -25,6 +25,7 @@ describe('BarChartComponent', () => {
   });
 
   xit('should create', () => {
+    console.log(component);
     expect(component).toBeTruthy();
   });
 });
