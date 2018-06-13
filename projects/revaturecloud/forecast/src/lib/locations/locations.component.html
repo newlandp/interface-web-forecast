@@ -1,29 +1,27 @@
-<h1 class="display-3 my-5">Housing Forecast</h1>
-
 <mat-tab-group class="tab-group">
-  <mat-tab label="Snapshots">
+  <mat-tab label="Reston">
     <ng-template matTabContent>
       <div class="tab-content">
 
-        <lib-snapshots [snapshots]="this.snapshots"></lib-snapshots>
+        <lib-bar-chart [snapshots]="this.restonSnapshots"></lib-bar-chart>
 
       </div>
     </ng-template>
   </mat-tab>
-  <mat-tab label="Location Breakdown">
+  <mat-tab label="Tampa">
     <ng-template matTabContent>
       <div class="tab-content">
 
-        <lib-location-breakdown [snapshots]="this.snapshots"></lib-location-breakdown>
+        <lib-bar-chart [snapshots]="this.tampaSnapshots"></lib-bar-chart>
 
       </div>
     </ng-template>
   </mat-tab>
-  <mat-tab label="Dummy">
+  <mat-tab label="New York">
       <ng-template matTabContent>
         <div class="tab-content">
 
-          <lib-dummy [snapshots]="this.snapshots"></lib-dummy>
+          <lib-bar-chart [snapshots]="this.newYorkSnapshots"></lib-bar-chart>
 
         </div>
       </ng-template>
