@@ -104,11 +104,11 @@ export class ForecastService {
     });
   }
 
-  getAllRoomsOccupancyAtDate(date: DateTimeFormat) {
+  getAllRoomsOccupancyAtDate(date: Intl.DateTimeFormat) {
     return this.http.get(`${this.rootUrl}/Rooms/${date}`);
   }
 
-  getAllUsersAtDate(date: DateTimeFormat) {
+  getAllUsersAtDate(date: Intl.DateTimeFormat) {
     return this.http.get(`${this.rootUrl}/Users/${date}`)
   }
 }

@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputSelectorComponent implements OnInit {
 
+  myControl;
+  startDate;
+  locations = ['NY', 'Reston', 'Tampa'];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onClick(){
+    console.log(this.startDate.toString());
+  }
 }
