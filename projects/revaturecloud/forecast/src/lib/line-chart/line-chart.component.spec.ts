@@ -33,7 +33,6 @@ describe('LineChartComponent', () => {
     chart.click();
 
     expect(spy).toHaveBeenCalled();
-
   });
 
   it('should call the chartHovered method when hovered', () => {
@@ -43,6 +42,5 @@ describe('LineChartComponent', () => {
     let event = new Event('chartHover');
     chart.dispatchEvent(event);
     expect(spy).toHaveBeenCalled();
-
-  })
+  });
 });
