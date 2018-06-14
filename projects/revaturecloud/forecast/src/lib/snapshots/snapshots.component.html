@@ -1,5 +1,9 @@
 <div class="row">
   <div class="col">
-    <lib-locations *ngIf="this.snapshots" [snapshots]="this.snapshots"></lib-locations>
+    <lib-locations *ngIf="this.allSnapshots"
+                   [allSnapshots]="this.allSnapshots"
+                   [restonSnapshots]="this.restonSnapshots"
+                   [tampaSnapshots]="this.tampaSnapshots"
+                   [newYorkSnapshots]="this.newYorkSnapshots"></lib-locations>
   </div>
 </div>
