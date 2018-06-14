@@ -7,7 +7,10 @@ import { Component, OnChanges, Input } from '@angular/core';
 })
 export class SnapshotsComponent implements OnChanges {
 
-  @Input('snapshots') snapshots: any[];
+  @Input('allSnapshots') allSnapshots: any[];
+  @Input('restonSnapshots') restonSnapshots: any[];
+  @Input('tampaSnapshots') tampaSnapshots: any[];
+  @Input('newYorkSnapshots') newYorkSnapshots: any[];
 
   constructor() { }
 

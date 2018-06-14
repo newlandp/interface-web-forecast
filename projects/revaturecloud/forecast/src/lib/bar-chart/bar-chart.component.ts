@@ -34,9 +34,7 @@ export class BarChartComponent implements OnInit {
     ];
   }
 
-  public chartClicked(e: any): void {
-    console.log(this.snapshots);
-  }
+  public chartClicked(e: any): void {}
 
   public chartHovered(e: any): void {}
 
