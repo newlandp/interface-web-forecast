@@ -6,7 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./pie-chart.component.css']
 })
 export class PieChartComponent implements OnInit {
-
   @Input('restonSnapshots') restonSnapshots: any[];
   @Input('tampaSnapshots') tampaSnapshots: any[];
   @Input('newYorkSnapshots') newYorkSnapshots: any[];

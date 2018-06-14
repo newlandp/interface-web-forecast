@@ -6,19 +6,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./locations.component.css']
 })
 export class LocationsComponent implements OnInit {
-
-  @Input('snapshots') snapshots: any[];
-
-  restonSnapshots: any[];
-  tampaSnapshots: any[];
-  newYorkSnapshots: any[];
+  @Input('allSnapshots') allSnapshots: any[];
+  @Input('restonSnapshots') restonSnapshots: any[];
+  @Input('tampaSnapshots') tampaSnapshots: any[];
+  @Input('newYorkSnapshots') newYorkSnapshots: any[];
 
   constructor() { }
 
-  ngOnInit() {
-    this.restonSnapshots = this.snapshots.filter(s => s.location == 'Reston');
-    this.tampaSnapshots = this.snapshots.filter(s => s.location == 'Tampa');
-    this.newYorkSnapshots = this.snapshots.filter(s => s.location == 'New York');
-  }
+  ngOnInit() {}
 
 }

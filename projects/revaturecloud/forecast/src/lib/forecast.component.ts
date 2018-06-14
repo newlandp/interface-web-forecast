@@ -10,18 +10,28 @@ import { CommonModule } from '@angular/common';
 })
 
 export class ForecastComponent implements OnInit {
-  locations;
-  snapshots;
+  allSnapshots;
+  restonSnapshots;
+  tampaSnapshots;
+  newYorkSnapshots;
 
   constructor(private forecastService: ForecastService) { }
 
   ngOnInit() {
-    this.forecastService.getAllLocationsTemp().subscribe(
-      locations => this.locations = locations
+    this.forecastService.getAllSnapshotsTemp().subscribe(
+      snapshots => this.allSnapshots = snapshots
     );
 
-    this.forecastService.getSnapshotsTemp().subscribe(
-      snapshots => this.snapshots = snapshots
+    this.forecastService.getRestonSnapshotsTemp().subscribe(
+      snapshots => this.restonSnapshots = snapshots
+    );
+
+    this.forecastService.getTampaSnapshotsTemp().subscribe(
+      snapshots => this.tampaSnapshots = snapshots
+    );
+
+    this.forecastService.getNewYorkSnapshotsTemp().subscribe(
+      snapshots => this.newYorkSnapshots = snapshots
     );
   }
 }

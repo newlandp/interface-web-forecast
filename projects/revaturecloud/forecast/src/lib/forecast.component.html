@@ -5,7 +5,10 @@
     <ng-template matTabContent>
       <div class="tab-content" name="user-forecast">
 
-        <lib-snapshots [snapshots]="this.snapshots"></lib-snapshots>
+        <lib-snapshots [allSnapshots]="this.allSnapshots"
+                       [restonSnapshots]="this.restonSnapshots"
+                       [tampaSnapshots]="this.tampaSnapshots"
+                       [newYorkSnapshots]="this.newYorkSnapshots"></lib-snapshots>
 
       </div>
     </ng-template>
@@ -14,7 +17,9 @@
     <ng-template matTabContent>
       <div class="tab-content">
 
-        <lib-location-breakdown [snapshots]="this.snapshots"></lib-location-breakdown>
+        <lib-location-breakdown [restonSnapshots]="this.restonSnapshots"
+                                [tampaSnapshots]="this.tampaSnapshots"
+                                [newYorkSnapshots]="this.newYorkSnapshots"></lib-location-breakdown>
 
       </div>
     </ng-template>
@@ -23,7 +28,7 @@
       <ng-template matTabContent>
         <div class="tab-content">
 
-          <lib-dummy [snapshots]="this.snapshots"></lib-dummy>
+          <lib-dummy></lib-dummy>
 
         </div>
       </ng-template>

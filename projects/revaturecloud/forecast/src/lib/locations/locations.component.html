@@ -1,4 +1,13 @@
 <mat-tab-group class="tab-group">
+    <mat-tab label="All">
+        <ng-template matTabContent>
+          <div class="tab-content">
+
+            <lib-bar-chart [snapshots]="this.allSnapshots"></lib-bar-chart>
+
+          </div>
+        </ng-template>
+      </mat-tab>
   <mat-tab label="Reston">
     <ng-template matTabContent>
       <div class="tab-content">
