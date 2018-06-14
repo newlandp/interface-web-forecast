@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {ChartsModule} from 'ng2-charts';
+import { ChartsModule } from 'ng2-charts';
 import { LineChartComponent } from './line-chart.component';
 
 describe('LineChartComponent', () => {
@@ -8,10 +8,10 @@ describe('LineChartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LineChartComponent ],
-      imports:[ ChartsModule ]
+      declarations: [LineChartComponent],
+      imports: [ChartsModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -40,8 +40,7 @@ describe('LineChartComponent', () => {
     let spy = spyOn(component, 'chartHovered');
     fixture.detectChanges();
     let chart = fixture.nativeElement.querySelector('canvas');
-    let event =  new Event('chartHover');
-    console.log(event);
+    let event = new Event('chartHover');
     chart.dispatchEvent(event);
     expect(spy).toHaveBeenCalled();
 
