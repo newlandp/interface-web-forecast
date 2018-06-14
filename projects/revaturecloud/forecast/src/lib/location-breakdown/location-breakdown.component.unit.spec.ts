@@ -1,6 +1,6 @@
 import { LocationBreakdownComponent } from "./location-breakdown.component";
 
-describe('forecast component', () => {
+describe('LocationBreakdownComponent', () => {
   let component: LocationBreakdownComponent;
 
   beforeEach(() => {

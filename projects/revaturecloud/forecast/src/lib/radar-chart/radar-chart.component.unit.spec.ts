@@ -1,6 +1,6 @@
 import { RadarChartComponent } from "./radar-chart.component";
 
-describe('forecast component', () => {
+describe('RadarChartComponent', () => {
   let component: RadarChartComponent;
 
   beforeEach(() => {

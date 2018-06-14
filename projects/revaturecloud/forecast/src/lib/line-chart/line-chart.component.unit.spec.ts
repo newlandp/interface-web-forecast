@@ -1,6 +1,6 @@
 import { LineChartComponent } from "./line-chart.component";
 
-describe('forecast component', () => {
+describe('LineChartComponent', () => {
   let component: LineChartComponent;
 
   beforeEach(() => {

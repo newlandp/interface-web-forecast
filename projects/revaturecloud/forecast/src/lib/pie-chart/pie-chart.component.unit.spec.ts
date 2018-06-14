@@ -1,6 +1,6 @@
 import { PieChartComponent } from "./pie-chart.component";
 
-describe('forecast component', () => {
+describe('PieChartComponent', () => {
   let component: PieChartComponent;
 
   beforeEach(() => {

@@ -1,6 +1,6 @@
 import { BarChartComponent } from "./bar-chart.component";
 
-describe('forecast component', () => {
+describe('BarChartComponent', () => {
   let component: BarChartComponent;
 
   beforeEach(() => {

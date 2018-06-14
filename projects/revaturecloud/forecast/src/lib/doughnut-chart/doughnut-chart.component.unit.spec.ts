@@ -1,6 +1,6 @@
 import { DoughnutChartComponent } from "./doughnut-chart.component";
 
-describe('forecast component', () => {
+describe('DoughnutChartComponent', () => {
   let component: DoughnutChartComponent;
 
   beforeEach(() => {

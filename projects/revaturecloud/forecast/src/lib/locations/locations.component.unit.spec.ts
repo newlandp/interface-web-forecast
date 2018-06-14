@@ -1,6 +1,6 @@
 import { LocationsComponent } from "./locations.component";
 
-describe('forecast component', () => {
+describe('LocationsComponent', () => {
   let component: LocationsComponent;
 
   beforeEach(() => {

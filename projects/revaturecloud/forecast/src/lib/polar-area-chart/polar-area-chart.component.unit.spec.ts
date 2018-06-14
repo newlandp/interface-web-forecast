@@ -1,6 +1,6 @@
 import { PolarAreaChartComponent } from "./polar-area-chart.component";
 
-describe('forecast component', () => {
+describe('PolarAreaChartComponent', () => {
   let component: PolarAreaChartComponent;
 
   beforeEach(() => {
