@@ -5,8 +5,13 @@ import { ForecastComponent } from './forecast.component';
 import { DummyComponent } from './dummy/dummy.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule, MatNativeDateModule } from '@angular/material';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ChartsModule } from 'ng2-charts';
@@ -24,7 +29,13 @@ import { InputSelectorComponent } from './input-selector/input-selector.componen
 
 @NgModule({
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
     MatTabsModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     BrowserAnimationsModule,
     HttpClientModule,
     ChartsModule
@@ -44,7 +55,8 @@ import { InputSelectorComponent } from './input-selector/input-selector.componen
     InputSelectorComponent
   ],
   providers: [
-    ForecastService
+    ForecastService,
+    MatDatepickerModule
   ],
   exports: [
     ForecastComponent
