@@ -10,10 +10,10 @@ describe('PieChartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PieChartComponent ],
+      declarations: [PieChartComponent],
       imports: [ChartsModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -31,8 +31,7 @@ describe('PieChartComponent', () => {
     let spy = spyOn(component, 'chartClicked');
     fixture.detectChanges();
     let chart = fixture.nativeElement.querySelector('canvas');
-    let event =  new Event('chartClick');
-    console.log(event);
+    let event = new Event('chartClick');
     chart.dispatchEvent(event);
     expect(spy).toHaveBeenCalled();
 
@@ -43,7 +42,7 @@ describe('PieChartComponent', () => {
     let spy = spyOn(component, 'chartHovered');
     fixture.detectChanges();
     let chart = fixture.nativeElement.querySelector('canvas');
-    let event =  new Event('chartHover');
+    let event = new Event('chartHover');
     chart.dispatchEvent(event);
     expect(spy).toHaveBeenCalled();
 
