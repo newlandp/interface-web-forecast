@@ -19,6 +19,7 @@ import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.com
 import { SnapshotsComponent } from './snapshots/snapshots.component';
 import { LocationsComponent } from './locations/locations.component';
 import { LocationBreakdownComponent } from './location-breakdown/location-breakdown.component';
+import { InputSelectorComponent } from './input-selector/input-selector.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { LocationBreakdownComponent } from './location-breakdown/location-breakd
     PolarAreaChartComponent,
     SnapshotsComponent,
     LocationsComponent,
-    LocationBreakdownComponent
+    LocationBreakdownComponent,
+    InputSelectorComponent
   ],
   providers: [
     ForecastService
