@@ -1,3 +1,4 @@
+import { ForecastService } from './forecast.service';
 import { PolarAreaChartComponent } from './polar-area-chart/polar-area-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
@@ -17,11 +18,13 @@ import { By } from '@angular/platform-browser';
 import { RadarChartComponent } from './radar-chart/radar-chart.component';
 import {ChartsModule} from 'ng2-charts';
 import { ForecastModule } from './forecast.module';
+import { observable } from 'rxjs';
 
 
 describe('ForecastComponent', () => {
   let component: ForecastComponent;
   let fixture: ComponentFixture<ForecastComponent>;
+
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -31,12 +34,14 @@ describe('ForecastComponent', () => {
       imports: [
         ForecastModule
 
-      ]
+      ],
+      providers: [ForecastService]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
+
     fixture = TestBed.createComponent(ForecastComponent);
     component = fixture.componentInstance;
     // fixture.detectChanges();
@@ -61,9 +66,18 @@ describe('ForecastComponent', () => {
     let dummy = fixture.debugElement.query(By.css('div[name="dummy"]'));
 
 
-    console.log(userForecast);
-    console.log(dummy);
+
     expect(userForecast).toBeTruthy();
     expect(dummy).toBeFalsy();
   });
+
+  it('should call the service method getAllLocationsTemp() and return an observable', () => {
+    let service = TestBed.get(ForecastService);
+    spyOn(service , 'getAllLocationsTemp').and.callThrough();
+
+
+    fixture.detectChanges();
+    expect(service.getAllLocationsTemp).toHaveBeenCalled();
+  });
+
 });
