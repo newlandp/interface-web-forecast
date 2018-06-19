@@ -60,7 +60,7 @@ export class PieChartComponent implements OnInit {
 
   getTotalRooms(snapshot) {
     return snapshot.reduce((total, snap) => {
-      return total + snap.roomCount;
+      return total + snap.roomOccupancyCount;
     }, 0);
   }
 
