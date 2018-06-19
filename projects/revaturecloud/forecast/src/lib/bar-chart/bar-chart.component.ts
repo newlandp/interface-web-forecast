@@ -29,7 +29,7 @@ export class BarChartComponent implements OnInit {
     });
 
     this.barChartData = [
-      { data: this.snapshots.map(s => s.roomCount), label: 'Room Count' },
+      { data: this.snapshots.map(s => s.roomOccupancyCount), label: 'Room Count' },
       { data: this.snapshots.map(s => s.userCount), label: 'User Count' }
     ];
   }
