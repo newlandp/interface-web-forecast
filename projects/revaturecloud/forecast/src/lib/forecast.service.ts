@@ -6,7 +6,7 @@ import { Observable, Observer } from 'rxjs';
 
 @Injectable()
 export class ForecastService {
-  private readonly rootUrl: string = 'root/api/Forecast';
+  private readonly rootUrl: string = 'http://ec2-13-57-218-138.us-west-1.compute.amazonaws.com:9020/api/Forecast';
 
   constructor(private http: HttpClient) { }
 
@@ -35,8 +35,8 @@ export class ForecastService {
   }
 
   // (GET) /Snapshots/{date:datetime}
-  getAllSnapshots(date: string) {
-    return this.http.get(`${this.rootUrl}/Snapshots/${date}`);
+  getAllSnapshots() {
+    return this.http.get(`${this.rootUrl}/Snapshots`);
   }
 
   // (GET) /SnapshotsRange/{startDate:datetime}/{endDate:datetime}
