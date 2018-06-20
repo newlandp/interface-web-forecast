@@ -18,20 +18,25 @@ export class ForecastComponent implements OnInit {
   constructor(private forecastService: ForecastService) { }
 
   ngOnInit() {
-    this.forecastService.getAllSnapshotsTemp().subscribe(
-      snapshots => this.allSnapshots = snapshots
+    this.forecastService.getAllSnapshots().subscribe(
+      (snapshots: any[]) => {
+        this.allSnapshots = snapshots.filter(s => s.location === "All");
+        this.restonSnapshots = snapshots.filter(s => s.location === "Reston");
+        this.tampaSnapshots = snapshots.filter(s => s.location === "Tampa");
+        this.newYorkSnapshots = snapshots.filter(s => s.location === "New York");
+      }
     );
 
-    this.forecastService.getRestonSnapshotsTemp().subscribe(
-      snapshots => this.restonSnapshots = snapshots
-    );
+    // this.forecastService.getRestonSnapshotsTemp().subscribe(
+    //   snapshots => this.restonSnapshots = snapshots
+    // );
 
-    this.forecastService.getTampaSnapshotsTemp().subscribe(
-      snapshots => this.tampaSnapshots = snapshots
-    );
+    // this.forecastService.getTampaSnapshotsTemp().subscribe(
+    //   snapshots => this.tampaSnapshots = snapshots
+    // );
 
-    this.forecastService.getNewYorkSnapshotsTemp().subscribe(
-      snapshots => this.newYorkSnapshots = snapshots
-    );
+    // this.forecastService.getNewYorkSnapshotsTemp().subscribe(
+    //   snapshots => this.newYorkSnapshots = snapshots
+    // );
   }
 }
